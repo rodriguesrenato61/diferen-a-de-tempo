@@ -15,9 +15,18 @@
 				<div class="box-body">
 					<div class="campos">
 						<input type="text" name="inicio" id="inicio" placeholder="Início" />
+						<input type="text" name="hora1" id="hora1" placeholder="Hora" />
 						<input type="text" name="fim" id="fim" placeholder="Fim" />
+						<input type="text" name="hora2" id="hora2" placeholder="Hora" />
 					</div> <!-- class campos -->
 					<div class="btn-box">
+						<select id="medida">
+							<option value="0">--Medida--</option>
+							<option value="d">Dias</option>
+							<option value="h">Horas</option>
+							<option value="m">Minutos</option>
+							<option value="s">Segundos</option>
+						</select>
 						<button class="btn-calcular" id="btn-calcular">Calcular</button>
 					</div> <!-- btn-box -->
 					<div class="resultado" id="resultado">
