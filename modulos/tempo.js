@@ -127,7 +127,7 @@
 		}
 	
 		//função para converter uma determinada hora em sua quantidade de segundos
-		this.converterHora = function(horario){
+		this.convertHorasSegundos = function(horario){
 			
 			let retorno;
 			
@@ -153,7 +153,7 @@
 		}
 		
 		//converte quantidade de segundos em horas
-		this.convertSegundos = function(segundos){
+		this.convertSegundosHoras = function(segundos){
 			
 			segundos = parseInt(segundos);
 			
@@ -275,7 +275,7 @@
 			
 				let dias = Math.floor(segundos / 86400);
 				let restante = segundos - (dias * 86400);
-				let horas = this.convertSegundos(restante);
+				let horas = this.convertSegundosHoras(restante);
 				retorno += dias+" dias "+horas;
 				
 			}else{
@@ -392,8 +392,8 @@
 			
 			if(dt1[0] == dt2[0]){
 				
-				hora1 = this.converterHora(dt1[1]);
-				hora2 = this.converterHora(dt2[1]);
+				hora1 = this.convertHorasSegundos(dt1[1]);
+				hora2 = this.convertHorasSegundos(dt2[1]);
 				
 				if(hora1 !== false  && hora2 !== false){
 					console.log("Diferença de dias: 0");
@@ -407,8 +407,8 @@
 				
 			}else{
 				
-				hora1 = this.converterHora(dt1[1]);
-				hora2 = this.converterHora(dt2[1]);
+				hora1 = this.convertHorasSegundos(dt1[1]);
+				hora2 = this.convertHorasSegundos(dt2[1]);
 				
 				
 				if(hora1 !== false && hora2 !== false){
@@ -440,7 +440,7 @@
 		}
 		
 		//converte data no formato d/m/y para y-m-d e junta com o horário para formar um datetime
-		this.convertDataDatetime = function(data, horario){
+		this.convertDataHoraDatetime = function(data, horario){
 		
 			let dt = data.split('/');
 			
@@ -450,6 +450,7 @@
 			
 		}
 		
+		//função que calcula a diferença entre dois datetimes em determinada medida
 		this.datetime_diff = function(inicio, fim, medida){
 			
 			let retorno = new Array(); 
@@ -469,7 +470,7 @@
 				
 					segundos = this.datetime_diff_seconds(inicio, fim);
 					
-					retorno[1] = this.convertSegundos(segundos);
+					retorno[1] = this.convertSegundosHoras(segundos);
 				
 				break;
 				

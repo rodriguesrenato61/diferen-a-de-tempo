@@ -33,11 +33,11 @@ function calcular(){
 		
 			let diferenca;
 			
-			let dt1 = objetoTempo.convertDataDatetime(inicio.value, hora1.value);
+			let dt1 = objetoTempo.convertDataHoraDatetime(inicio.value, hora1.value);
 			
 			console.log("dt1: "+dt1);
 			
-			let dt2 = objetoTempo.convertDataDatetime(fim.value, hora2.value);
+			let dt2 = objetoTempo.convertDataHoraDatetime(fim.value, hora2.value);
 			
 			console.log("dt2: "+dt2);
 				
