@@ -490,7 +490,7 @@
 				
 				default:
 				
-					retorno[0] = false;
+					retorno[1] = false;
 				
 				break;
 				
